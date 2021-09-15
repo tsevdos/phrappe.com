@@ -30,12 +30,39 @@ const getPagesArr = (posts: number) => {
 };
 
 // Exported fns
-export const getAllSlugs = () =>
-  fileNames.map((filename) => ({
-    params: {
-      slug: filename.replace(".md", ""),
-    },
-  }));
+export const getDataFromSlug = (slug: string): string => {
+  const fullPath = path.join(contentDirectory, `${slug}.md`);
+  const content = fs.readFileSync(fullPath, "utf8");
+
+  return content;
+};
+
+export const getAllPostsParams = () =>
+  fileNames
+    .map(filenameToData)
+    .filter(byPostType)
+    .map((post) => {
+      const postContent = getDataFromSlug(post.slug);
+      const { data } = matter(postContent);
+
+      return {
+        params: {
+          slug: post.slug,
+          category: data.categories[0].toLowerCase() as string,
+        },
+      };
+    });
+
+export const getAllPageParams = () =>
+  fileNames
+    .map(filenameToData)
+    .filter(byPageType)
+    .map((page) => ({
+      params: {
+        slug: page.slug,
+        category: "page",
+      },
+    }));
 
 export const getAllArchivePageNumbers = () => {
   const totalPosts = fileNames.map(filenameToData).filter(byPostType).length;
@@ -47,13 +74,6 @@ export const getAllArchivePageNumbers = () => {
       num: v,
     },
   }));
-};
-
-export const getDataFromSlug = async (slug: string): Promise<string> => {
-  const fullPath = path.join(contentDirectory, `${slug}.md`);
-  const content = fs.readFileSync(fullPath, "utf8");
-
-  return content;
 };
 
 export const getAllSortedPosts = () =>

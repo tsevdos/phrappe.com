@@ -71,7 +71,7 @@ const Sidebar: FC<SidebarProps> = ({ pages, categories }) => (
 
           {pages.map(({ title, slug }) => (
             <li key={slug}>
-              <Link href={`/${slug}`}>
+              <Link href={`/page/${slug}`}>
                 <a>{title}</a>
               </Link>
             </li>

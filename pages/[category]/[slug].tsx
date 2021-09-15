@@ -3,13 +3,19 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
-import { DiscussionEmbed } from "disqus-react";
 import Head from "next/head";
-import { getAllSlugs, getCategories, getPages, getDataFromSlug } from "../lib/helpers";
-import ContactForm from "../components/ContactForm";
-import { PostData } from "../lib/types";
-import Config from "../lib/config";
-import styles from "./page.module.css";
+import { DiscussionEmbed } from "disqus-react";
+import {
+  getAllPageParams,
+  getAllPostsParams,
+  getCategories,
+  getPages,
+  getDataFromSlug,
+} from "../../lib/helpers";
+import ContactForm from "../../components/ContactForm";
+import { PostData } from "../../lib/types";
+import Config from "../../lib/config";
+import styles from "../page.module.css";
 
 const Page: FC<PostData> = ({ title, date, type, content }) => {
   const formattedDate = new Date(date).toLocaleDateString("el-GR");
@@ -44,10 +50,16 @@ const Page: FC<PostData> = ({ title, date, type, content }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllSlugs();
+type Path = { slug: string; category: string };
 
-  return { paths, fallback: false };
+export const getStaticPaths: GetStaticPaths<Path> = async () => {
+  const pages = getAllPageParams();
+  const posts = getAllPostsParams();
+
+  return {
+    paths: [...pages, ...posts],
+    fallback: false,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

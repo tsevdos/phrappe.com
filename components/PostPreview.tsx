@@ -7,7 +7,7 @@ const PostPreview: FC<PostData> = ({ slug, title, date, categories }) => (
   <Fragment>
     <article className={styles["post-entry"]}>
       <h2>
-        <Link href={`/${slug}`}>
+        <Link href={`/${categories[0].toLowerCase()}/${slug}`}>
           <a>{title}</a>
         </Link>
       </h2>
