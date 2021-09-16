@@ -44,5 +44,5 @@ The theme works in **WordPress 2.7** and above (it was developed and tested in W
 - [Kostis Vasiliadis](http://www.speak.gr/ "Speak.gr - Kostis Vasiliadis") for the amazing graphics and support
 - [Paul Irish](http://paulirish.com/ "Paul Irish's blog") for the [HTML5 boilerplate](http://html5boilerplate.com/ "HTML5 Boilerplate")
 - [Remy Sharp](http://remysharp.com/ "Remy Sharp's blog") for the [html5shiv](http://code.google.com/p/html5shiv/ "html5shiv")
-- [Lea Verou](http://leaverou.me/ "Lea Verou's blog") for the cool article/tip [Stripes & other patterns with CSS3 &#8211; no images](http://leaverou.me/demos/css3-patterns.html "Stripes and other patterns with CSS3 - no images")
+- [Lea Verou](http://leaverou.me/ "Lea Verou's blog") for the cool article/tip [Stripes & other patterns with CSS3 - no images](http://leaverou.me/demos/css3-patterns.html "Stripes and other patterns with CSS3 - no images")
 - [Google Font API](http://code.google.com/apis/webfonts/ "Google Font API")

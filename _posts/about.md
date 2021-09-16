@@ -6,7 +6,7 @@ type: "page"
 
 ### Phrappe.com
 
-Phrappe is serving ice-chilled, instant web tips as frequently as it can &#8211; we are a busy coffee shop! The coffee house author is [John Tsevdos](http://www.tsevdos.com/ "Tsevdos.com"). If you want to request a special recipe pleace don't hesitate to [contact me](http://phrappe.com/contact/ "Contact Phrappe.com").
+Phrappe is serving ice-chilled, instant web tips as frequently as it can - we are a busy coffee shop! The coffee house author is [John Tsevdos](http://www.tsevdos.com/ "Tsevdos.com"). If you want to request a special recipe pleace don't hesitate to [contact me](http://phrappe.com/contact/ "Contact Phrappe.com").
 
 ### About John Tsevdos
 
