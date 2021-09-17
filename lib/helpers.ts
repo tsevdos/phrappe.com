@@ -44,14 +44,16 @@ export const getAllPostsParams = () =>
     .map((post) => {
       const postContent = getDataFromSlug(post.slug);
       const { data } = matter(postContent);
+      const categories = data.categories.map((cat: string) => cat.toLowerCase());
 
-      return {
+      return categories.map((category: string) => ({
         params: {
           slug: post.slug,
-          category: data.categories[0].toLowerCase() as string,
+          category,
         },
-      };
-    });
+      }));
+    })
+    .flat(2); // In odrer to generate posts in multiple categories
 
 export const getAllPageParams = () =>
   fileNames
