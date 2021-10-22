@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import Head from "next/head";
-import { DiscussionEmbed } from "disqus-react";
 import {
   getAllPageParams,
   getAllPostsParams,
@@ -17,38 +16,21 @@ import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
 import styles from "../page.module.css";
 
-const Page: FC<PostData> = ({ title, date, type, content }) => {
-  const formattedDate = new Date(date).toLocaleDateString("el-GR");
-  const disqusConfig = {
-    url: "https://your-site-url/post-slug",
-    identifier: title, // Single post id
-    title: title, // Single post title
-  };
-  const isPostEntry = type === "post";
+const Page: FC<PostData> = ({ title, content }) => (
+  <>
+    <Head>
+      <title>{`${title} - ${Config.title}`}</title>
+    </Head>
 
-  return (
-    <>
-      <Head>
-        <title>{`${title} - ${Config.title}`}</title>
-      </Head>
+    <header className={styles.header}>
+      <h1>{title}</h1>
+    </header>
+    <hr />
+    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
 
-      <header className={styles.header}>
-        <h1>{title}</h1>
-        {isPostEntry && <p>{formattedDate}</p>}
-      </header>
-      <hr />
-      <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
-
-      {isPostEntry && (
-        <div>
-          <DiscussionEmbed shortname="tsevdos" config={disqusConfig} />
-        </div>
-      )}
-
-      {title === "Contact" && <ContactForm />}
-    </>
-  );
-};
+    {title === "Contact" && <ContactForm />}
+  </>
+);
 
 type Path = { slug: string; category: string };
 
