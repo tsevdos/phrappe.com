@@ -60,9 +60,6 @@ export const getStaticPaths: GetStaticPaths<Path> = async () => {
     params: { slug: post.params.slug, cat: post.params.category },
   }));
 
-  console.log(posts);
-  console.log(pages);
-
   return {
     paths: [...pages, ...posts],
     fallback: false,

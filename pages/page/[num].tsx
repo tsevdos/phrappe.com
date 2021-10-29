@@ -29,8 +29,6 @@ const ArchivePage: FC<ArchivePageProps> = ({ posts, pagination }) => (
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllArchivePageNumbers();
 
-  console.log(paths);
-
   return { paths, fallback: false };
 };
 
