@@ -15,7 +15,7 @@ A bookmarklet is a small Javascript program stored into a url. A user can bookma
 
 As you can see, you instruct the browser to run a javascript url. You can drag & drop the link to your bookmarks, and execute the bookmarklet on any page! That’s the power of bookmarklets. Go on try it 😉
 
-Unfortunately, we have some browser limitations on url size (usually 2000 characters), that makes it impossible to write serious js code straight into a url. To tackle this limitation we can use our bookmarklet as a loader to an external js file using the below code :
+Unfortunately, we have some browser limitations on url size (usually 2000 characters), that makes it impossible to write serious js code straight into a url. To tackle this limitation we can use our bookmarklet as a loader to an external js file using the below code:
 
 ```js
 javascript: (function () {

@@ -12,7 +12,7 @@ tags:
   - internet explorer 10
 ---
 
-As you probably know Internet Explorer 10 doesn&#8217;t support the [good-old IE CSS conditional comments](<http://msdn.microsoft.com/en-us/library/ms537512(v=VS.85).aspx> "Conditional comments"). This means that the below code **won't work in IE10**!
+As you probably know Internet Explorer 10 doesn't support the [good-old IE CSS conditional comments](<http://msdn.microsoft.com/en-us/library/ms537512(v=VS.85).aspx> "Conditional comments"). This means that the below code **won't work in IE10**!
 
 ```html
 <!-- Not working :-( -->

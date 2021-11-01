@@ -12,7 +12,7 @@ Log in to your WordPress admin panel and navigate to **Appearance** -> **Themes*
 
 ## Requirements
 
-The theme works in **WordPress 2.7** and above (it was developed and tested in WordPress 3). If you have any issues please [contact me](http://phrappe.com/contact/ "Phrappe contact").Tested and works fine with the below bowsers :
+The theme works in **WordPress 2.7** and above (it was developed and tested in WordPress 3). If you have any issues please [contact me](http://phrappe.com/contact/ "Phrappe contact").Tested and works fine with the below bowsers:
 
 - Chrome
 - Firefox
@@ -39,7 +39,7 @@ The theme works in **WordPress 2.7** and above (it was developed and tested in W
 - French translation (credits to Nicolas Rouichi)
 - Romanian translation (credits to [Alexander Ovsov](http://webhostinggeeks.com "Alexander Ovsov") )
 
-## Special thanks to :
+## Special thanks to:
 
 - [Kostis Vasiliadis](http://www.speak.gr/ "Speak.gr - Kostis Vasiliadis") for the amazing graphics and support
 - [Paul Irish](http://paulirish.com/ "Paul Irish's blog") for the [HTML5 boilerplate](http://html5boilerplate.com/ "HTML5 Boilerplate")

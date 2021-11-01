@@ -19,7 +19,7 @@ tags:
   - web
 ---
 
-There&#8217;s no reason to explain everything from scratch, there are plenty of <a title="Responsive Images: How they Almost Worked and What We Need" href="http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/" target="_blank">posts</a> <a title="Responsible responsive images" href="http://adactio.com/journal/4997/" target="_blank">on</a> <a title="Responsive Images: Experimenting with Context-Aware Image Sizing" href="http://filamentgroup.com/lab/responsive_images_experimenting_with_context_aware_image_sizing/" target="_blank">this</a> <a title="RESPONSIVE IMAGES" href="http://unstoppablerobotninja.com/entry/responsive-images/" target="_blank">topic</a>, but if you are <a title="Responsive Web Design" href="http://www.alistapart.com/articles/responsive-web-design/" target="_blank">building a responsive layout</a>, don’t forget to apply these **media rules** to your CSS file.
+There's no reason to explain everything from scratch, there are plenty of [posts](http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/ "Responsive Images: How they Almost Worked and What We Need") [on](http://adactio.com/journal/4997/ "Responsible responsive images") [this](http://filamentgroup.com/lab/responsive_images_experimenting_with_context_aware_image_sizing/ "Responsive Images: Experimenting with Context-Aware Image Sizing") [topic](http://unstoppablerobotninja.com/entry/responsive-images/ "RESPONSIVE IMAGES"), but if you are [building a responsive layout](http://www.alistapart.com/articles/responsive-web-design/ "Responsive Web Design"), don’t forget to apply these **media rules** to your CSS file.
 
 ```css
 /* Images */

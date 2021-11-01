@@ -9,7 +9,7 @@ tags:
   - jquery
 ---
 
-There are two, easy ways to achieve this. The first one is simply by using the array [] notation directly on the jQuery object :
+There are two, easy ways to achieve this. The first one is simply by using the array [] notation directly on the jQuery object:
 
 ```js
 var myDiv = $("div")[0]; // myDiv is a raw DOM object

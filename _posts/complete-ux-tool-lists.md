@@ -14,7 +14,7 @@ tags:
 
 Lately I have become a heavy reader of various **UX** related books. Below I summarize lists of useful UX tools for every UX process. Some of them overlap categories (for example the prototyping tools usually provide wireframing tools as well, or some of the feedback tools provide a ticketing system as well), although I tried as hard as I could to separate them. Enjoy...
 
-**Update** : If you know a service that is not listed here, please leave me a comment to add it 🙂
+**Update**: If you know a service that is not listed here, please leave me a comment to add it 🙂
 
 ## Wireframing
 
@@ -58,7 +58,7 @@ Lately I have become a heavy reader of various **UX** related books. Below I sum
 
 ## Session Recording
 
-- [Clicktale&nbsp;(Mouse Tracking Suite)](http://www.clicktale.com/products/mouse-tracking-suite "Clicktale")
+- [Clicktale (Mouse Tracking Suite)](http://www.clicktale.com/products/mouse-tracking-suite "Clicktale")
 - [Ghostrec](http://www.ghostrec.com/ "Ghostrec")
 - [Mouseflow](http://mouseflow.com/ "Mouseflow")
 - [OpenHallway](http://www.openhallway.com/ "OpenHallaway")
@@ -96,7 +96,6 @@ Lately I have become a heavy reader of various **UX** related books. Below I sum
 - [Optimizely](https://www.optimizely.com/ "Optimizely")
 - [Adobe Test & Target](http://www.adobe.com/products/testandtarget.html "Adobe Test & Target")
 - [Unbounce](http://unbounce.com/ "Unbounce")
-- [Adobe Test & Target](http://www.adobe.com/products/testandtarget.html "Adobe Test & Target")
 - [Visual Revenue](http://visualrevenue.com/ "Visual Revenue")
 - [Artisan](http://useartisan.com/ "Artisan")
 - [Global Maxer](http://www.globalmaxer.com/ "Global Maxer")

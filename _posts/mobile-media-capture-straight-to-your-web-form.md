@@ -15,7 +15,7 @@ tags:
   - mobile
 ---
 
-So, you've just build your latest responsive web design&nbsp;masterpiece&nbsp;and you're adding the final touches for the mobile viewport. Suddenly you discover a form where the user must submit a profile **image** (or **video** or **audio**) in order to continue. Wouldn't it be nice to let the user use their phone in order to take a picture (or video or audio) with it, and at the same time keep the normal fall-back of the input file element for desktop browsers? Well you can, just use the below attributes on your **input fields**. Desktop browsers will use them as normal file inputs, while mobile devices will add this extra **native flavour**.
+So, you've just build your latest responsive web design masterpiece and you're adding the final touches for the mobile viewport. Suddenly you discover a form where the user must submit a profile **image** (or **video** or **audio**) in order to continue. Wouldn't it be nice to let the user use their phone in order to take a picture (or video or audio) with it, and at the same time keep the normal fall-back of the input file element for desktop browsers? Well you can, just use the below attributes on your **input fields**. Desktop browsers will use them as normal file inputs, while mobile devices will add this extra **native flavour**.
 
 ```html
 <input type="file" accept="image;capture=camera" />

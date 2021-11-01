@@ -13,7 +13,7 @@ I just read the last page of the [jQuery Cookbook](http://www.amazon.com/jQuery-
 
 ## Specify a context
 
-By specifying a context, we help jQuery identify the elements we need, and as a result speed up things, especially on larger projects with complicated DOMs. It's also ridiculously easy to implement. Just pass a second parameter at the jQuery wrapper, for example :
+By specifying a context, we help jQuery identify the elements we need, and as a result speed up things, especially on larger projects with complicated DOMs. It's also ridiculously easy to implement. Just pass a second parameter at the jQuery wrapper, for example:
 
 ```js
 $("h1", "div#posts"); //using jQuery wrapper as context
@@ -45,7 +45,7 @@ $('<div id="test"><p><a>John</a></p></div>')
   .appendTo("body");
 ```
 
-A good habit is to change lines on each function to increase readability. So the above one-line spaghetti code can be re-written like this :
+A good habit is to change lines on each function to increase readability. So the above one-line spaghetti code can be re-written like this:
 
 ```js
 $('<div id="test"><p><a>John</a></p></div>')

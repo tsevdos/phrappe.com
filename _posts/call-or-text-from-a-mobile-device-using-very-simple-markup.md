@@ -22,7 +22,8 @@ At my [latest presentation](https://speakerdeck.com/tsevdos/pragmatic-responsive
 
 ```html
 <a href="tel:+306948123456">call me</a>
+
 <a href="sms:+306948123456">text me</a>
 ```
 
-The above enhancements, together with a [custom iOS home screen icon/image](http://phrappe.com/markup/how-to-attach-a-custom-apple-iphoneipad-icon-to-your-website/ "How to attach a custom apple iPhone/iPad icon to your website"), are probably the easiest markup implementations that give to your mobile site/app&nbsp;many&nbsp;more extra points! If you've tested the above example with other devices (android, windows, blackberry, etc.) please confirm that it's working (just leave a comment)...
+The above enhancements, together with a [custom iOS home screen icon/image](http://phrappe.com/markup/how-to-attach-a-custom-apple-iphoneipad-icon-to-your-website/ "How to attach a custom apple iPhone/iPad icon to your website"), are probably the easiest markup implementations that give to your mobile site/app many more extra points! If you've tested the above example with other devices (android, windows, blackberry, etc.) please confirm that it's working (just leave a comment)...

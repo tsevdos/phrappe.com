@@ -7,7 +7,7 @@ categories:
   - javascript
 ---
 
-**Update** : Get the [nwrapper plugin](http://plugins.jquery.com/nwrapper/) from the official jQuery plugins site.
+**Update**: Get the [nwrapper plugin](http://plugins.jquery.com/nwrapper/) from the official jQuery plugins site.
 
 jQuery provides a large variety of functions for element [manipulation](http://api.jquery.com/category/manipulation/ "jQuery Manipulation methonds"), that in most cases will manipulate the selected elements in no time. A very useful function for every day manipulation is the [.wrap()](http://api.jquery.com/wrap/ ".wrap() function") function that we can use to wrap an HTML structure around each jQuery element. But what happens when we want to wrap an HTML structure on every n'th number of the selected elements? Unfortunately, jQuery doesn't provide any options to the warp function in order to to do something similar.
 

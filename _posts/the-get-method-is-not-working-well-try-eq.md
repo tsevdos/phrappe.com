@@ -12,7 +12,7 @@ tags:
   - object
 ---
 
-Every now and then, I come across the very same issue, so I decided to write a post about it. Many new JS developers are struggling to find out why the below code is not working when applying jQuery’s [get()](http://api.jquery.com/get/) method :
+Every now and then, I come across the very same issue, so I decided to write a post about it. Many new JS developers are struggling to find out why the below code is not working when applying jQuery’s [get()](http://api.jquery.com/get/) method:
 
 ```js
 $(".class").get(1).addClass("test");

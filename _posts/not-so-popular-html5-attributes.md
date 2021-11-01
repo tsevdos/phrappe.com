@@ -18,7 +18,7 @@ HTML5 offers many new attributes that make our lives easier and our code more se
 
 ## hidden attribute
 
-The hidden attribute, as you can easily guess, hides the element that it is set on. It acts almost identical to style `{ display: none; }`, but it's simpler, cleaner and more semantic (since you are hiding the element directly on DOM rather than style). It is also ridiculously easy to make a fallback on browsers that do not support the specific attribute, just hide it in your styles ( { display: none; } ) or javascript&#8230;
+The hidden attribute, as you can easily guess, hides the element that it is set on. It acts almost identical to style `{ display: none; }`, but it's simpler, cleaner and more semantic (since you are hiding the element directly on DOM rather than style). It is also ridiculously easy to make a fallback on browsers that do not support the specific attribute, just hide it in your styles ( { display: none; } ) or javascript...
 
 ```html
 <!-- div is hidden (act just like display:none) -->
@@ -27,7 +27,7 @@ The hidden attribute, as you can easily guess, hides the element that it is set 
 
 ## download attribute
 
-Do you have downloadable content in your website (like PDF files etc)? If yes then with a little HTML5 attribute you can provide better semantics to the link element, give a better description/title to your file and enforce the browser to download it! Just use the download attribute followed by a string that represents the description/title of your download. Even if your filename is a timestamp or a temp name, the user will download the file, &nbsp;having as its name the title you used.
+Do you have downloadable content in your website (like PDF files etc)? If yes then with a little HTML5 attribute you can provide better semantics to the link element, give a better description/title to your file and enforce the browser to download it! Just use the download attribute followed by a string that represents the description/title of your download. Even if your filename is a timestamp or a temp name, the user will download the file, having as its name the title you used.
 
 ```html
 <!-- will download as "issue28.pdf" -->

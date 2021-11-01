@@ -19,7 +19,7 @@ Getting the selected element's tag name is very easy in jQuery. Just use the bel
 $(el).prop("tagName");
 ```
 
-Keep in mind that by default the returned tag's name is capitalized so if you want it lowercase you&#8217;ll need this :
+Keep in mind that by default the returned tag's name is capitalized so if you want it lowercase you'll need this:
 
 ```js
 $(el).prop("tagName").toLowerCase();

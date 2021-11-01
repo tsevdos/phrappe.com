@@ -12,7 +12,7 @@ tags:
 
 Lately I’m using more and more **HTML5** elements on my markup. It’s the right thing to do after all, especially on smaller, flexible projects. But as a typical developer I’m too lazy to type everything from scratch, that’s why I'm using more and more the [HTML5 Boilerplate](http://html5boilerplate.com/ "HTML5 Boilerplate") from [Paul Irish](http://paulirish.com/ "Paul Irish"). It’s great but I catch myself deleting many files and lines of code every time, in order to make Boilerplate fulfil my requirements. After all, in most cases I don’t really need things like [YUI Profiler](http://developer.yahoo.com/yui/profiler/ "YUI Profiler"), [Google Analytics](http://www.google.com/analytics/ "Google Analytics"), favicons/iPhone icons and many others for a quick prototype. What I really need, is a very simple template with less features, scripts, and tools! Below you can see/use my **HTML5 Boilerplate**...
 
-Markup :
+Markup:
 
 ```html
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ Markup :
 
 A single stylesheet and just one script, will do the work just fine. (The [html5shiv](http://code.google.com/p/html5shiv/ "html5shiv") helps older IE browsers, to style the new HTML5 elements).
 
-CSS :
+CSS:
 
 ```css
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */

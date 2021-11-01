@@ -27,5 +27,5 @@ tags:
 - [SublimeCodeIntel](https://sublime.wbond.net/packages/SublimeCodeIntel "SublimeCodeIntel")
 - [SublimeLinter](https://sublime.wbond.net/packages/SublimeLinter "SublimeLinter")
 - [TernJS](https://sublime.wbond.net/packages/TernJS "TernJS")
-- [Theme &#8211; Soda Dark](https://sublime.wbond.net/packages/Theme%20-%20Soda "Soda")
-- Color Scheme &#8211; Monokai (default)
+- [Theme - Soda Dark](https://sublime.wbond.net/packages/Theme%20-%20Soda "Soda")
+- Color Scheme - Monokai (default)

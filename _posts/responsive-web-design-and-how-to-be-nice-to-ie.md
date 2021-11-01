@@ -21,6 +21,6 @@ The first thing you must do in any case (this tip is not only for **responsive w
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 ```
 
-Easy so far, the next major problem is that IE8 and below doesn&#8217;t recognise **HTML5 elements**. Again you can include either [html5shiv](http://code.google.com/p/html5shiv/ "html5shiv") or [modernizr](http://modernizr.com/ "modernizr") to fix this. **[Html5shiv](http://code.google.com/p/html5shiv/ "html5shiv") **is smaller in filesize and does the job but **[Modernizr](http://modernizr.com/ "modernizr")** can help you detect browser features (and not only that), the choice is yours.
+Easy so far, the next major problem is that IE8 and below doesn't recognise **HTML5 elements**. Again you can include either [html5shiv](http://code.google.com/p/html5shiv/ "html5shiv") or [modernizr](http://modernizr.com/ "modernizr") to fix this. **[Html5shiv](http://code.google.com/p/html5shiv/ "html5shiv") **is smaller in filesize and does the job but **[Modernizr](http://modernizr.com/ "modernizr")** can help you detect browser features (and not only that), the choice is yours.
 
 Finally you can make IE understand **media queries** (a very important part of responsive web design) with the excellent Javascript polyfill **[Respond.js](https://github.com/scottjehl/Respond "Respond.js")**. That's it, you've made it! With these very simple steps we can be nice to IE and make it treat right our responsive web sites.

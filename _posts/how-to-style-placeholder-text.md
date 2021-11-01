@@ -15,7 +15,7 @@ tags:
   - webkit
 ---
 
-The <a title="The placeholder attribute" href="http://www.w3.org/TR/html5/common-input-element-attributes.html#the-placeholder-attribute" target="_blank">placeholder attribute</a> is one of the most useful **HTML5** attributes, because with just a tiny attribute you provide a better user experience to the end user, you make your code more semantic and all of this is achieved without writing a single line of javascript. But this super easy and time saving attribute is a bit difficult to style. The typical input styles **don't apply** to our placeholder! No worries though, in webkit-based and gecko-based browsers you can apply the below rules and style your placeholders.
+The [placeholder attribute](http://www.w3.org/TR/html5/common-input-element-attributes.html#the-placeholder-attribute "The placeholder attribute") is one of the most useful **HTML5** attributes, because with just a tiny attribute you provide a better user experience to the end user, you make your code more semantic and all of this is achieved without writing a single line of javascript. But this super easy and time saving attribute is a bit difficult to style. The typical input styles **don't apply** to our placeholder! No worries though, in webkit-based and gecko-based browsers you can apply the below rules and style your placeholders.
 
 ```html
 <input type="text" placeholder="Placeholder Text" />

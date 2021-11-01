@@ -60,7 +60,7 @@ unless person.isRunning
   person.startRunning()
 ```
 
-Finally, you can forget boolean operators such as double ampersands (&&) and the double vertical bars (||) and start using the much more convenient `and` and `or` keywords. The real fun starts when you combine all these new keywords. Writing Javascript becomes as easy as english!
+Finally, you can forget boolean operators such as double ampersands (`&&`) and the double vertical bars (`||`) and start using the much more convenient `and` and `or` keywords. The real fun starts when you combine all these new keywords. Writing Javascript becomes as easy as english!
 
 ```
 name = 'John'
