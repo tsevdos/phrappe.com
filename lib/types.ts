@@ -6,4 +6,5 @@ export type PostData = {
   content: string;
   categories: string[];
   tags: string[];
+  cat?: string;
 };

@@ -17,12 +17,12 @@ import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
 import styles from "../page.module.css";
 
-const Page: FC<PostData> = ({ title, date, type, content }) => {
+const Page: FC<PostData> = ({ title, date, type, content, cat, slug }) => {
   const formattedDate = new Date(date).toLocaleDateString("el-GR");
   const disqusConfig = {
-    url: "https://your-site-url/post-slug",
-    identifier: title, // Single post id
-    title: title, // Single post title
+    url: `${Config.url}/${cat}/${slug}`,
+    identifier: `${Config.url}/${cat}/${slug}`,
+    title: title,
   };
   const isPostEntry = type === "post";
 
@@ -41,7 +41,7 @@ const Page: FC<PostData> = ({ title, date, type, content }) => {
 
       {isPostEntry && (
         <div>
-          <DiscussionEmbed shortname="tsevdos" config={disqusConfig} />
+          <DiscussionEmbed shortname="phrappe" config={disqusConfig} />
         </div>
       )}
 
@@ -74,6 +74,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
+      cat: params?.cat,
       ...data,
       content,
       pages,

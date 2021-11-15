@@ -1,6 +1,4 @@
 ## TODO
 
-- [] redirects
-- [] Add google analytics
-- [] Add feed
-- [] Add Search
+- [ ] Update dependencies
+- [ ] Add Search
