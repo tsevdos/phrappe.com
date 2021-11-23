@@ -7,6 +7,7 @@ const ContactForm: FC = () => {
     message: "",
   });
   const { name, email, message } = formData;
+  const isValid = Boolean(name.trim()) && Boolean(email.trim()) && Boolean(message.trim());
   const updateForm = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const key = e.target.name;
     const value = e.target.value;
@@ -32,7 +33,9 @@ const ContactForm: FC = () => {
         </label>
       </div>
       <div>
-        <button type="submit">Send</button>
+        <button type="submit" disabled={!isValid}>
+          Send
+        </button>
       </div>
     </form>
   );
