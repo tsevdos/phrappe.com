@@ -14,7 +14,6 @@ import {
 import ContactForm from "../../components/ContactForm";
 import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
-import styles from "../page.module.css";
 
 const Page: FC<PostData> = ({ title, content }) => (
   <>
@@ -22,7 +21,7 @@ const Page: FC<PostData> = ({ title, content }) => (
       <title>{`${title} - ${Config.title}`}</title>
     </Head>
 
-    <header className={styles.header}>
+    <header>
       <h1>{title}</h1>
     </header>
     <hr />

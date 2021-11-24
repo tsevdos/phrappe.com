@@ -1,11 +1,10 @@
 import { FC, Fragment } from "react";
 import Link from "next/link";
 import { PostData } from "../lib/types";
-import styles from "../pages/page.module.css";
 
 const PostPreview: FC<PostData> = ({ slug, title, date, categories }) => (
   <Fragment>
-    <article className={styles["post-entry"]}>
+    <article>
       <h2>
         <Link href={`/${categories[0].toLowerCase()}/${slug}`}>
           <a>{title}</a>
@@ -13,9 +12,9 @@ const PostPreview: FC<PostData> = ({ slug, title, date, categories }) => (
       </h2>
 
       <div>
-        <div className={styles["categories-container"]}>
+        <div>
           <h4>Categories: </h4>
-          <ul className={styles.categories}>
+          <ul>
             {categories?.map((tag) => (
               <li key={tag}>{tag}</li>
             ))}

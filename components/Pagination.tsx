@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Link from "next/link";
-import styles from "../pages/page.module.css";
 
 export type PaginationProps = {
   currentPage: number;
@@ -23,7 +22,7 @@ const Pagination: FC<PaginationProps> = ({
     : `/page/${currentPage + 1}`;
 
   return (
-    <nav className={styles.pagination}>
+    <nav>
       {!isFirstPage ? (
         <Link href={prevUrl}>
           <a className="button primary prev">Prev page</a>

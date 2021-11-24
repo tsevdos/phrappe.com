@@ -20,7 +20,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^7.1.0",
-    "rehype-raw": "^6.1.0"
+    "rehype-raw": "^6.1.0",
+    "twind": "^0.16.16"
   },
   "devDependencies": {
     "@types/node": "^16.11.9",

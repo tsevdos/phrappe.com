@@ -1,15 +1,18 @@
 import { FC } from "react";
 import Link from "next/link";
+import { tw } from "twind";
 import Config from "../lib/config";
 
 const Header: FC = () => (
-  <header id="header">
+  <header className={tw`mb-6 p-2 flex justify-between border(b-2 solid gray-800)`}>
     <Link href="/">
-      <a className="logo">
-        <strong>{Config.title}</strong>
+      <a>
+        <h1 className={tw`text(3xl gray-800) font-medium dark:text-white transition`}>
+          {Config.title}
+        </h1>
       </a>
     </Link>
-    <ul className="icons">
+    <ul className={tw`flex`}>
       <li>
         <a href="https://www.linkedin.com/in/tsevdosjohn/" className="icon brands fa-linkedin-in">
           <span className="label">LinkedIn</span>

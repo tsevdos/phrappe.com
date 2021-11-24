@@ -15,7 +15,6 @@ import {
 import ContactForm from "../../components/ContactForm";
 import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
-import styles from "../page.module.css";
 
 const Page: FC<PostData> = ({ title, date, type, content, cat, slug }) => {
   const formattedDate = new Date(date).toLocaleDateString("el-GR");
@@ -32,7 +31,7 @@ const Page: FC<PostData> = ({ title, date, type, content, cat, slug }) => {
         <title>{`${title} - ${Config.title}`}</title>
       </Head>
 
-      <header className={styles.header}>
+      <header>
         <h1>{title}</h1>
         {isPostEntry && <p>{formattedDate}</p>}
       </header>
