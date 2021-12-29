@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import Head from "next/head";
-import { DiscussionEmbed } from "disqus-react";
 import {
   getAllPageParams,
   getAllPostsParams,
@@ -17,13 +16,8 @@ import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
 import styles from "../page.module.css";
 
-const Page: FC<PostData> = ({ title, date, type, content, cat, slug }) => {
+const Page: FC<PostData> = ({ title, date, type, content }) => {
   const formattedDate = new Date(date).toLocaleDateString("el-GR");
-  const disqusConfig = {
-    url: `${Config.url}/${cat}/${slug}`,
-    identifier: `${Config.url}/${cat}/${slug}`,
-    title: title,
-  };
   const isPostEntry = type === "post";
 
   return (
@@ -38,13 +32,6 @@ const Page: FC<PostData> = ({ title, date, type, content, cat, slug }) => {
       </header>
       <hr />
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
-
-      {isPostEntry && (
-        <div>
-          <DiscussionEmbed shortname="phrappe" config={disqusConfig} />
-        </div>
-      )}
-
       {title === "Contact" && <ContactForm />}
     </>
   );
@@ -74,7 +61,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      cat: params?.cat,
       ...data,
       content,
       pages,
