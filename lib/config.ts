@@ -1,5 +1,5 @@
 export default {
-  title: "Phrappe",
+  title: "Phrappe.com",
   tagline: "ice-chilled, instant web tips",
   url: "https://phrappe.com",
   author: "John Tsevdos",
