@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Link from "next/link";
-import styles from "../pages/page.module.css";
 
 export type PaginationProps = {
   currentPage: number;
@@ -23,22 +22,48 @@ const Pagination: FC<PaginationProps> = ({
     : `/page/${currentPage + 1}`;
 
   return (
-    <nav className={styles.pagination}>
-      {!isFirstPage ? (
-        <Link href={prevUrl}>
-          <a className="button primary prev">Prev page</a>
-        </Link>
-      ) : (
-        <span />
-      )}
-      {!isLastPage ? (
-        <Link href={nextUrl}>
-          <a className="button primary next">Next page</a>
-        </Link>
-      ) : (
-        <span />
-      )}
-    </nav>
+    <div className="text-center">
+      {/* <!-- Visible in mobile --> */}
+      <nav className="flex">
+        {!isFirstPage && (
+          <Link href={prevUrl}>
+            <a className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
+              <svg
+                className="hi-solid hi-chevron-left inline-block w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </Link>
+        )}
+        <div className="flex items-center grow justify-center px-2 sm:px-4"></div>
+        {!isLastPage && (
+          <Link href={nextUrl}>
+            <a className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
+              <svg
+                className="hi-solid hi-chevron-right inline-block w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </Link>
+        )}
+      </nav>
+    </div>
   );
 };
 

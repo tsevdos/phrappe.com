@@ -1,31 +1,28 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import Link from "next/link";
 import { PostData } from "../lib/types";
-import styles from "../pages/page.module.css";
 
 const PostPreview: FC<PostData> = ({ slug, title, date, categories }) => (
-  <Fragment>
-    <article className={styles["post-entry"]}>
-      <h2>
-        <Link href={`/${categories[0].toLowerCase()}/${slug}`}>
-          <a>{title}</a>
-        </Link>
-      </h2>
-
-      <div>
-        <div className={styles["categories-container"]}>
-          <h4>Categories: </h4>
-          <ul className={styles.categories}>
-            {categories?.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
-        </div>
-        <p>{new Date(date).toLocaleDateString("el-GR")}</p>
-      </div>
-    </article>
-    <hr />
-  </Fragment>
+  <div className="flex flex-col">
+    <p className="text-gray-600 text-sm font-medium mb-1">
+      {new Date(date).toLocaleDateString("el-GR")}
+    </p>
+    <h2 className="font-bold text-xl md:text-2xl mb-2">
+      <Link href={`/${categories[0].toLowerCase()}/${slug}`}>
+        <a className="leading-7 text-gray-800 hover:text-gray-600">{title}</a>
+      </Link>
+    </h2>
+    <ul>
+      {categories?.map((tag) => (
+        <li
+          key={tag}
+          className="font-semibold inline-flex px-2 py-1 leading-4 text-sm rounded-full text-indigo-700 bg-indigo-200 mr-2"
+        >
+          {tag}
+        </li>
+      ))}
+    </ul>
+  </div>
 );
 
 export default PostPreview;
