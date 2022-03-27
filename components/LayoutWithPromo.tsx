@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "./Header";
+import Promo from "./Promo";
 import Footer from "./Footer";
 import Config from "../lib/config";
 import { PostData } from "../lib/types";
@@ -10,7 +11,7 @@ type LayoutProps = {
   categories: string[];
 };
 
-const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
+const LayoutWithPromo: FC<LayoutProps> = ({ pages, categories, children }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -27,10 +28,11 @@ const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
     </Head>
     <div className="bg-white overflow-hidden">
       <Header pages={pages} />
+      <Promo />
       <div className="pb-12 container xl:max-w-7xl mx-auto px-4 lg:px-10">{children}</div>
       <Footer categories={categories} />
     </div>
   </>
 );
 
-export default Layout;
+export default LayoutWithPromo;
