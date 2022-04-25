@@ -26,7 +26,7 @@ type PageProps = {
 };
 
 const Page: FC<PageProps> = ({ pages, categories, title, postCategories, date, content }) => {
-  const formattedDate = new Date(date).toLocaleDateString("el-GR");
+  const formattedDate = new Date(date).toLocaleDateString("en-GB");
 
   return (
     <>

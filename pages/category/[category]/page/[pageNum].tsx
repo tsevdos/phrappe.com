@@ -35,19 +35,17 @@ const CategoryPage: FC<CategoryPageProps> = ({
       <title>{`${category} - ${Config.title}`}</title>
     </Head>
     <LayoutWithPromo pages={pages} categories={categories}>
-      <div className="bg-white">
-        <div className="space-y-12 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
-          <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
-            Category: {category}
-          </h2>
-          <hr />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {posts.map((post) => (
-              <PostPreview key={post.slug} {...post} />
-            ))}
-          </div>
-          <Pagination {...pagination} category={category} />
+      <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
+        <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
+          Category: {category}
+        </h2>
+        <hr />
+        <div className="flex flex-col">
+          {posts.map((post) => (
+            <PostPreview key={post.slug} {...post} />
+          ))}
         </div>
+        <Pagination {...pagination} category={category} />
       </div>
     </LayoutWithPromo>
   </>
