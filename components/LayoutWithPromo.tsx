@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -9,6 +9,7 @@ import { PostData } from "../lib/types";
 type LayoutProps = {
   pages: PostData[];
   categories: string[];
+  children: ReactNode;
 };
 
 const LayoutWithPromo: FC<LayoutProps> = ({ pages, categories, children }) => (

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "./Footer";
@@ -8,6 +8,7 @@ import { PostData } from "../lib/types";
 type LayoutProps = {
   pages: PostData[];
   categories: string[];
+  children: ReactNode;
 };
 
 const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
