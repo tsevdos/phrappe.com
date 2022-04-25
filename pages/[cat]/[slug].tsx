@@ -36,12 +36,12 @@ const Page: FC<PageProps> = ({ pages, categories, title, postCategories, date, c
       <Layout pages={pages} categories={categories}>
         <div className="bg-white">
           <div className="space-y-16 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
-            <div className="text-center">
+            <div className="text-center prose prose-indigo prose-lg mx-auto">
               <div className="text-sm uppercase font-bold tracking-wider mb-1 text-indigo-700">
                 {postCategories.map((cat) => cat).join(", ")}
               </div>
               <h1 className="text-3xl md:text-4xl font-extrabold mb-4">{title}</h1>
-              <p className="text-lg font-semibold md:text-xl md:leading-relaxed font-medium text-gray-600 lg:w-2/3 mx-auto">
+              <p className="text-lg font-semibold md:text-xl md:leading-relaxed text-gray-600 lg:w-2/3 mx-auto">
                 {formattedDate}
               </p>
             </div>

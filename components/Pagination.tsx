@@ -23,7 +23,6 @@ const Pagination: FC<PaginationProps> = ({
 
   return (
     <div className="text-center">
-      {/* <!-- Visible in mobile --> */}
       <nav className="flex">
         {!isFirstPage && (
           <Link href={prevUrl}>

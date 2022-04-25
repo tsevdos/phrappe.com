@@ -96,7 +96,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
             >
               Cloudflare
             </a>{" "}
-            for hosting and cloud functions and{" "}
+            for edge hosting and functions and{" "}
             <a
               href="https://tailwindcss.com"
               target="_blank"
