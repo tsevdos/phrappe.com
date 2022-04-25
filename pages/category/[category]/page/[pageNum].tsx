@@ -35,7 +35,7 @@ const CategoryPage: FC<CategoryPageProps> = ({
       <title>{`${category} - ${Config.title}`}</title>
     </Head>
     <Layout withHero pages={pages} categories={categories}>
-      <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
+      <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
         <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
           Category: {category}
         </h2>
