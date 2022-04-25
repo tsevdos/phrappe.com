@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { GetStaticProps } from "next";
+import LayoutWithPromo from "../components/LayoutWithPromo";
 import PostPreview from "../components/PostPreview";
 import Pagination from "../components/Pagination";
 import { getSortedPostsPage, getPages, getCategories, buildFeeds } from "../lib/helpers";
@@ -7,15 +8,25 @@ import { PostData } from "../lib/types";
 
 type HomeProps = {
   posts: PostData[];
+  pages: PostData[];
+  categories: string[];
 };
 
-const Home: FC<HomeProps> = ({ posts }) => (
-  <>
-    {posts.map((post) => (
-      <PostPreview key={post.slug} {...post} />
-    ))}
-    <Pagination currentPage={1} isFirstPage={true} isLastPage={false} />
-  </>
+const Home: FC<HomeProps> = ({ posts, pages, categories }) => (
+  <LayoutWithPromo pages={pages} categories={categories}>
+    <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
+      <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
+        Latest Posts
+      </h2>
+      <hr />
+      <div className="flex flex-col">
+        {posts.map((post) => (
+          <PostPreview key={post.slug} {...post} />
+        ))}
+      </div>
+      <Pagination currentPage={1} isFirstPage={true} isLastPage={false} />
+    </div>
+  </LayoutWithPromo>
 );
 
 export const getStaticProps: GetStaticProps = async () => {

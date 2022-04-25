@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import LayoutWithPromo from "../../components/LayoutWithPromo";
 import PostPreview from "../../components/PostPreview";
 import Pagination, { PaginationProps } from "../../components/Pagination";
 import {
@@ -14,16 +15,26 @@ import { PostData } from "../../lib/types";
 
 type ArchivePageProps = {
   posts: PostData[];
+  pages: PostData[];
+  categories: string[];
   pagination: PaginationProps;
 };
 
-const ArchivePage: FC<ArchivePageProps> = ({ posts, pagination }) => (
-  <>
-    {posts.map((post) => (
-      <PostPreview key={post.slug} {...post} />
-    ))}
-    <Pagination {...pagination} />
-  </>
+const ArchivePage: FC<ArchivePageProps> = ({ posts, pages, categories, pagination }) => (
+  <LayoutWithPromo pages={pages} categories={categories}>
+    <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
+      <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
+        Page {pagination.currentPage} of all posts
+      </h2>
+      <hr />
+      <div className="flex flex-col">
+        {posts.map((post) => (
+          <PostPreview key={post.slug} {...post} />
+        ))}
+      </div>
+      <Pagination {...pagination} />
+    </div>
+  </LayoutWithPromo>
 );
 
 export const getStaticPaths: GetStaticPaths = async () => {

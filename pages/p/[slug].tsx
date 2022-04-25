@@ -11,26 +11,46 @@ import {
   getPages,
   getDataFromSlug,
 } from "../../lib/helpers";
+import Layout from "../../components/Layout";
 import ContactForm from "../../components/ContactForm";
 import { PostData } from "../../lib/types";
 import Config from "../../lib/config";
-import styles from "../page.module.css";
 
-const Page: FC<PostData> = ({ title, content }) => (
-  <>
-    <Head>
-      <title>{`${title} - ${Config.title}`}</title>
-    </Head>
+type PageProps = {
+  pages: PostData[];
+  categories: string[];
+  title: PostData["title"];
+  content: PostData["content"];
+};
 
-    <header className={styles.header}>
-      <h1>{title}</h1>
-    </header>
-    <hr />
-    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+const Page: FC<PageProps> = ({ pages, categories, title, content }) => {
+  const isContactPage = title === "Contact";
 
-    {title === "Contact" && <ContactForm />}
-  </>
-);
+  return (
+    <>
+      <Head>
+        <title>{`${title} - ${Config.title}`}</title>
+      </Head>
+      <Layout pages={pages} categories={categories}>
+        <div className="bg-white">
+          <div className="space-y-16 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{title}</h2>
+            </div>
+
+            <article className="prose prose-indigo prose-lg mx-auto">
+              {isContactPage ? (
+                <ContactForm />
+              ) : (
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+              )}
+            </article>
+          </div>
+        </div>
+      </Layout>
+    </>
+  );
+};
 
 type Path = { slug: string; category: string };
 

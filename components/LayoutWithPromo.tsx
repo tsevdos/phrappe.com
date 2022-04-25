@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "./Header";
+import Hero from "./Hero";
 import Footer from "./Footer";
 import Config from "../lib/config";
 import { PostData } from "../lib/types";
@@ -11,7 +12,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
+const LayoutWithPromo: FC<LayoutProps> = ({ pages, categories, children }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -26,12 +27,12 @@ const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
         href="https://www.phrappe.com/rss/feed.xml"
       />
     </Head>
-    <div className="bg-white overflow-hidden">
-      <Header pages={pages} />
-      <div className="pb-12 container xl:max-w-7xl mx-auto px-4 lg:px-10">{children}</div>
-      <Footer categories={categories} />
-    </div>
+
+    <Header pages={pages} />
+    <Hero />
+    <div className="bg-gray-100">{children}</div>
+    <Footer categories={categories} />
   </>
 );
 
-export default Layout;
+export default LayoutWithPromo;
