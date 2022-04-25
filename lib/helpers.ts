@@ -145,13 +145,14 @@ export const getPages = () =>
 
 export const getPagination = (currentPage: number, totalPosts: number) => {
   const isFirstPage = currentPage === 1;
-  const isLastPage = Math.floor(totalPosts / POSTS_PER_PAGE) + 1 === currentPage;
+  const isLastPage =
+    totalPosts === POSTS_PER_PAGE || Math.floor(totalPosts / POSTS_PER_PAGE) + 1 === currentPage;
 
   return { currentPage, isFirstPage, isLastPage };
 };
 
 export const buildFeeds = async () => {
-  const posts = await getAllSortedPosts();
+  const posts = getAllSortedPosts();
   const siteURL = Config.url;
   const date = new Date();
   const author = {

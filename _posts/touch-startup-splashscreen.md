@@ -4,8 +4,8 @@ date: "2013-09-24"
 type: "post"
 permalink: /markup/touch-startup-splashscreen/
 categories:
-  - markup
   - mobile
+  - markup
 tags:
   - ios
   - ipad

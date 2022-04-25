@@ -4,8 +4,8 @@ date: "2015-12-14"
 type: "post"
 permalink: /javascript/greek-in-tech/
 categories:
-  - javascript
   - projects
+  - javascript
 tags:
   - backbone.js
   - javascript

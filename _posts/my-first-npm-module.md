@@ -4,8 +4,8 @@ date: "2016-09-19"
 type: "post"
 permalink: /javascript/my-first-npm-module/
 categories:
-  - javascript
   - projects
+  - javascript
 tags:
   - backbone.js
   - greek

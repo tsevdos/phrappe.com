@@ -4,8 +4,8 @@ date: "2015-08-03"
 type: "post"
 permalink: /javascript/avoid-coffeescript-and-use-es6/
 categories:
-  - coffeescript
   - javascript
+  - coffeescript
 tags:
   - coffeescript
   - es6
