@@ -4,8 +4,8 @@ date: "2017-01-22"
 type: "post"
 permalink: /javascript/repocompare-io/
 categories:
-  - javascript
   - projects
+  - javascript
 tags:
   - babel
   - compare
