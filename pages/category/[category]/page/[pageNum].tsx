@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { GetStaticPaths } from "next";
 import Head from "next/head";
-import LayoutWithPromo from "../../../../components/LayoutWithPromo";
+import Layout from "../../../../components/Layout";
 import PostPreview from "../../../../components/PostPreview";
 import Pagination, { PaginationProps } from "../../../../components/Pagination";
 import {
@@ -34,7 +34,7 @@ const CategoryPage: FC<CategoryPageProps> = ({
     <Head>
       <title>{`${category} - ${Config.title}`}</title>
     </Head>
-    <LayoutWithPromo pages={pages} categories={categories}>
+    <Layout withHero pages={pages} categories={categories}>
       <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
         <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
           Category: {category}
@@ -47,7 +47,7 @@ const CategoryPage: FC<CategoryPageProps> = ({
         </div>
         <Pagination {...pagination} category={category} />
       </div>
-    </LayoutWithPromo>
+    </Layout>
   </>
 );
 

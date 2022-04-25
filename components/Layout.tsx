@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
+import Hero from "./Hero";
 import Footer from "./Footer";
 import Config from "../lib/config";
 import { PostData } from "../lib/types";
@@ -9,9 +10,10 @@ type LayoutProps = {
   pages: PostData[];
   categories: string[];
   children: ReactNode;
+  withHero?: boolean;
 };
 
-const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
+const Layout: FC<LayoutProps> = ({ withHero = false, pages, categories, children }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -26,11 +28,11 @@ const Layout: FC<LayoutProps> = ({ pages, categories, children }) => (
         href="https://www.phrappe.com/rss/feed.xml"
       />
     </Head>
-    <div className="bg-white overflow-hidden">
-      <Header pages={pages} />
-      <div className="pb-12 container xl:max-w-7xl mx-auto px-4 lg:px-10">{children}</div>
-      <Footer categories={categories} />
-    </div>
+
+    <Header pages={pages} />
+    {withHero && <Hero />}
+    <main>{children}</main>
+    <Footer categories={categories} />
   </>
 );
 

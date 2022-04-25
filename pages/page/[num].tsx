@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import LayoutWithPromo from "../../components/LayoutWithPromo";
+import Layout from "../../components/Layout";
 import PostPreview from "../../components/PostPreview";
 import Pagination, { PaginationProps } from "../../components/Pagination";
 import {
@@ -21,7 +21,7 @@ type ArchivePageProps = {
 };
 
 const ArchivePage: FC<ArchivePageProps> = ({ posts, pages, categories, pagination }) => (
-  <LayoutWithPromo pages={pages} categories={categories}>
+  <Layout withHero pages={pages} categories={categories}>
     <div className="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 lg:w-full">
       <h2 className="text-center text-3xl md:text-4xl md:text-left font-extrabold ">
         Page {pagination.currentPage} of all posts
@@ -34,7 +34,7 @@ const ArchivePage: FC<ArchivePageProps> = ({ posts, pages, categories, paginatio
       </div>
       <Pagination {...pagination} />
     </div>
-  </LayoutWithPromo>
+  </Layout>
 );
 
 export const getStaticPaths: GetStaticPaths = async () => {
