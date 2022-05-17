@@ -22,13 +22,31 @@ const Hero: FC = () => (
       <div className="lg:basis-2/3 lg:w-full lg:pt-10">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Get in touch!</h2>
-          <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-400 lg:w-3/4 xl:w-full mx-auto">
+          <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-300 lg:w-3/4 xl:w-full mx-auto">
             Hi, I’m a software engineer from Athens 🇬🇷 and huge fan of everything{" "}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl font-bold text-yellow-400 underline decoration-yellow-400"
+            >
+              JavaScript{" "}
+            </a>
+            (and of course{" "}
+            <a
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-2xl font-bold text-blue-500 underline decoration-blue-500"
+            >
+              TypeScript
+            </a>
+            ),{" "}
             <a
               href="https://reactjs.org/"
               target="_blank"
               rel="noreferrer"
-              className="text-2xl font-bold text-indigo-600 underline decoration-indigo-600"
+              className="text-2xl font-bold text-cyan-400 underline decoration-cyan-400"
             >
               React
             </a>
@@ -37,7 +55,7 @@ const Hero: FC = () => (
               href="https://jamstack.org/"
               target="_blank"
               rel="noreferrer"
-              className="text-2xl font-bold text-pink-500 underline decoration-pink-600"
+              className="text-2xl font-bold text-pink-500 underline decoration-pink-500"
             >
               Jamstack
             </a>{" "}
@@ -46,7 +64,7 @@ const Hero: FC = () => (
               href="https://en.wikipedia.org/wiki/Serverless_computing"
               target="_blank"
               rel="noreferrer"
-              className="text-2xl font-bold text-fuchsia-600 underline decoration-fuchsia-600"
+              className="text-2xl font-bold text-fuchsia-500 underline decoration-fuchsia-500"
             >
               Serverless
             </a>
@@ -55,7 +73,7 @@ const Hero: FC = () => (
               href="https://www.epignosishq.com"
               target="_blank"
               rel="noreferrer"
-              className="text-2xl font-bold text-blue-600 underline decoration-blue-600"
+              className="text-2xl font-bold text-blue-500 underline decoration-blue-500"
             >
               Epignosis
             </a>{" "}
@@ -64,7 +82,7 @@ const Hero: FC = () => (
               href="https://www.codehub.gr/codelearn/our-instructors/"
               target="_blank"
               rel="noreferrer"
-              className="text-2xl font-bold text-orange-600 underline decoration-orange-600"
+              className="text-2xl font-bold text-orange-500 underline decoration-orange-500"
             >
               Code.Hub
             </a>

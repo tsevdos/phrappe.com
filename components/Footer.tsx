@@ -10,9 +10,9 @@ const Footer: FC<FooterProps> = ({ categories }) => (
     <div className="container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="space-y-6">
-          <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-500">
+          <h2 className="text-sm uppercase font-semibold tracking-wider text-gray-400">
             Categories
-          </h4>
+          </h2>
           <nav className="flex flex-col space-y-3">
             {categories.map((category) => (
               <Link key={category} href={`/category/${encodeURIComponent(category)}/page/1`}>
@@ -22,7 +22,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
           </nav>
         </div>
         <div className="space-y-6">
-          <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-500">Links</h4>
+          <h2 className="text-sm uppercase font-semibold tracking-wider text-gray-400">Links</h2>
           <nav className="flex flex-col space-y-3">
             <a
               href="https://tsevdos.me/"
@@ -67,7 +67,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
           </nav>
         </div>
         <div className="space-y-6">
-          <h4 className="text-sm uppercase font-semibold tracking-wider text-gray-500">Info</h4>
+          <h2 className="text-sm uppercase font-semibold tracking-wider text-gray-400">Info</h2>
           <p className="text leading-relaxed text-gray-300">
             This site is embracing various{" "}
             <a
@@ -113,6 +113,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
       <div className="flex flex-col md:flex-row-reverse md:justify-between space-y-6 md:space-y-0 text-center md:text-left text-sm">
         <nav className="space-x-4">
           <a
+            aria-label="LinkedIn"
             href="https://www.linkedin.com/in/tsevdosjohn/"
             target="_blank"
             rel="noreferrer"
@@ -128,6 +129,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
             </svg>
           </a>
           <a
+            aria-label="Github"
             href="https://github.com/tsevdos"
             target="_blank"
             rel="noreferrer"
@@ -143,6 +145,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
             </svg>
           </a>
           <a
+            aria-label="Twitter"
             href="https://twitter.com/tsevdos"
             target="_blank"
             rel="noreferrer"

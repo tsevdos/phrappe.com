@@ -26,7 +26,10 @@ const Pagination: FC<PaginationProps> = ({
       <nav className="flex">
         {!isFirstPage && (
           <Link href={prevUrl}>
-            <a className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
+            <a
+              aria-label="Previous page"
+              className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none"
+            >
               <svg
                 className="hi-solid hi-chevron-left inline-block w-5 h-5"
                 fill="currentColor"
@@ -45,7 +48,10 @@ const Pagination: FC<PaginationProps> = ({
         <div className="flex items-center grow justify-center px-2 sm:px-4"></div>
         {!isLastPage && (
           <Link href={nextUrl}>
-            <a className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
+            <a
+              aria-label="Next page"
+              className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none"
+            >
               <svg
                 className="hi-solid hi-chevron-right inline-block w-5 h-5"
                 fill="currentColor"
