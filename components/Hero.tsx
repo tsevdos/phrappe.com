@@ -30,8 +30,8 @@ const Hero: FC = () => (
               rel="noreferrer"
               className="text-2xl font-bold text-yellow-400 underline decoration-yellow-400"
             >
-              JavaScript{" "}
-            </a>
+              JavaScript
+            </a>{" "}
             (and of course{" "}
             <a
               href="https://www.typescriptlang.org/"
