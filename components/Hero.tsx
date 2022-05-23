@@ -23,7 +23,7 @@ const Hero: FC = () => (
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white">Get in touch!</h2>
           <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-300 lg:w-3/4 xl:w-full mx-auto">
-            Hi, I’m a software engineer from Athens 🇬🇷 and huge fan of everything{" "}
+            Hi, I’m a software engineer from Athens 🇬🇷 and huge fan of full-stack{" "}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
@@ -32,7 +32,7 @@ const Hero: FC = () => (
             >
               JavaScript
             </a>{" "}
-            (and of course{" "}
+            (mostly{" "}
             <a
               href="https://www.typescriptlang.org/"
               target="_blank"
@@ -40,8 +40,8 @@ const Hero: FC = () => (
               className="text-2xl font-bold text-blue-500 underline decoration-blue-500"
             >
               TypeScript
-            </a>
-            ),{" "}
+            </a>{" "}
+            nowadays),{" "}
             <a
               href="https://reactjs.org/"
               target="_blank"
@@ -49,8 +49,8 @@ const Hero: FC = () => (
               className="text-2xl font-bold text-cyan-400 underline decoration-cyan-400"
             >
               React
-            </a>
-            ,{" "}
+            </a>{" "}
+            (and its ecosystem),{" "}
             <a
               href="https://jamstack.org/"
               target="_blank"
