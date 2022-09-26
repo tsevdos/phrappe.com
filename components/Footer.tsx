@@ -57,6 +57,14 @@ const Footer: FC<FooterProps> = ({ categories }) => (
               GitHub
             </a>
             <a
+              href="https://www.npmjs.com/~tsevdos"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gray-300 hover:text-gray-400"
+            >
+              npm
+            </a>
+            <a
               href="https://twitter.com/tsevdos"
               target="_blank"
               rel="noreferrer"
@@ -145,6 +153,22 @@ const Footer: FC<FooterProps> = ({ categories }) => (
             </svg>
           </a>
           <a
+            aria-label="NPM"
+            href="https://www.npmjs.com/~tsevdos"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-300 hover:text-gray-400"
+          >
+            <svg
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon-npm inline-block w-5 h-5"
+            >
+              <path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z" />
+            </svg>
+          </a>
+          <a
             aria-label="Twitter"
             href="https://twitter.com/tsevdos"
             target="_blank"
@@ -162,7 +186,7 @@ const Footer: FC<FooterProps> = ({ categories }) => (
           </a>
         </nav>
         <div className="text-gray-400">
-          <span className="font-medium">&copy; Phrappe.com</span>
+          <span className="font-medium">&copy; Phrappe.com - Made with ❤️ in Athens, Greece</span>
         </div>
       </div>
     </div>
