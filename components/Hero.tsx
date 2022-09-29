@@ -1,22 +1,18 @@
 import { FC } from "react";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import Link from "next/link";
 import animationData from "../lotties/coding.json";
 
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
+const style = {
+  width: 300,
+  height: 300,
 };
 
 const Hero: FC = () => (
   <div className="bg-gray-800">
     <div className="container flex flex-col md:flex-row xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32 ">
       <div className="hidden lg:block lg:basis-1/3">
-        <Lottie options={defaultOptions} height={300} width={300} />
+        <Lottie animationData={animationData} loop={true} style={style} />
       </div>
 
       <div className="lg:basis-2/3 lg:w-full lg:pt-10">
