@@ -19,7 +19,6 @@
     "noUnusedParameters": true,
     "importHelpers": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "incremental": true
   },

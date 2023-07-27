@@ -15,8 +15,12 @@ const Footer: FC<FooterProps> = ({ categories }) => (
           </h2>
           <nav className="flex flex-col space-y-3">
             {categories.map((category) => (
-              <Link key={category} href={`/category/${encodeURIComponent(category)}/page/1`}>
-                <a className="font-medium text-gray-300 hover:text-gray-400">{category}</a>
+              <Link
+                key={category}
+                href={`/category/${encodeURIComponent(category)}/page/1`}
+                className="font-medium text-gray-300 hover:text-gray-400"
+              >
+                {category}
               </Link>
             ))}
           </nav>
