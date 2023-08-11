@@ -1,3 +1,3 @@
-import "../.astro/types.d.ts";
-import "astro/client";
-import "astro-integration-lottie/env";
+/// <reference path="../.astro/types.d.ts" />
+/// <reference types="astro/client" />
+/// <reference types="astro-integration-lottie/env" />
