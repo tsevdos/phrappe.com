@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import { getAllSortedPosts, getCategories, Post } from "../../lib/helpers";
+import Config from "../../lib/config";
+
+export const getStaticPaths = (async () => {
+  const posts = await getAllSortedPosts();
+  const categories = await getCategories();
+
+  return posts.map((post) => {
+    return categories.map((cat) => ({
+      params: { cat, slug: post.slug },
+      props: { ...post },
+    }));
+  });
+}) satisfies GetStaticPaths;
+
+type Props = Post;
+
+const {
+  data: { title, categories, date },
+  render,
+} = Astro.props;
+const { Content } = await render();
+const formattedDate = new Date(date).toLocaleDateString("en-GB");
+---
+
+<Layout title={`${title} - ${Config.title}`}>
+  <div class="bg-white">
+    <div class="space-y-16 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+      <div class="text-center prose prose-indigo prose-lg mx-auto">
+        <div class="text-sm uppercase font-bold tracking-wider mb-1 text-indigo-700">
+          {categories.map((cat) => cat).join(", ")}
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-4">{title}</h1>
+        <p
+          class="text-lg font-semibold md:text-xl md:leading-relaxed text-gray-600 lg:w-2/3 mx-auto"
+        >
+          {formattedDate}
+        </p>
+      </div>
+
+      <article class="prose prose-indigo prose-lg mx-auto">
+        <Content />
+      </article>
+    </div>
+  </div>
+</Layout>

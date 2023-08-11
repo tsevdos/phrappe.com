@@ -1,0 +1,66 @@
+---
+type Props = {
+  currentPage: number;
+  isFirstPage: boolean;
+  isLastPage: boolean;
+  category?: string;
+};
+
+const { currentPage, isFirstPage, isLastPage, category } = Astro.props;
+const prevUrl = category
+  ? `/category/${category}/page/${currentPage - 1}`
+  : `/page/${currentPage - 1}`;
+const nextUrl = category
+  ? `/category/${category}/page/${currentPage + 1}`
+  : `/page/${currentPage + 1}`;
+---
+
+<div class="text-center">
+  <nav class="flex">
+    {
+      !isFirstPage && (
+        <a
+          href={prevUrl}
+          aria-label="Previous page"
+          class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none"
+        >
+          <svg
+            class="hi-solid hi-chevron-left inline-block w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      )
+    }
+    <div class="flex items-center grow justify-center px-2 sm:px-4"></div>
+    {
+      !isLastPage && (
+        <a
+          href={nextUrl}
+          aria-label="Next page"
+          class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none"
+        >
+          <svg
+            class="hi-solid hi-chevron-right inline-block w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      )
+    }
+  </nav>
+</div>
