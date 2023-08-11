@@ -32,7 +32,7 @@ const paginationPros = getPagination(pageNumInt, posts.length);
     </h2>
     <hr />
     <div class="flex flex-col">
-      {paginatedPosts.map((post) => <PostPreview key={post.slug} {...post} />)}
+      {paginatedPosts.map((post) => <PostPreview {...post} />)}
     </div>
     <Pagination {...paginationPros} />
   </div>
