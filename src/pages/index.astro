@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PostPreview from "../components/PostPreview.astro";
+import Pagination from "../components/Pagination.astro";
+import { getAllSortedPosts, getPageOfPosts, getPagination } from "../lib/helpers";
+import Config from "../lib/config";
+
+const pageNumber = 1;
+const allPosts = await getAllSortedPosts();
+const indexPosts = getPageOfPosts(allPosts, pageNumber);
+const paginationPros = getPagination(pageNumber, allPosts.length);
+---
+
+<Layout title={`${Config.title} | ${Config.tagline}`} withHero>
+  <div class="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
+    <h2 class="text-center text-3xl md:text-4xl md:text-left font-extrabold">Latest Posts</h2>
+    <hr />
+    <div class="flex flex-col">
+      {indexPosts.map((post) => <PostPreview {...post} />)}
+    </div>
+    <Pagination {...paginationPros} />
+  </div>
+</Layout>

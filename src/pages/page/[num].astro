@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import PostPreview from "../../components/PostPreview.astro";
+import Pagination from "../../components/Pagination.astro";
+import { getAllSortedPosts, getPageOfPosts, getPagination, getPagesArr } from "../../lib/helpers";
+import Config from "../../lib/config";
+
+export const getStaticPaths = (async () => {
+  const allSortedPosts = await getAllSortedPosts();
+  const pagesArr = getPagesArr(allSortedPosts.length);
+
+  return pagesArr.map((v) => ({
+    params: { num: v },
+    props: { posts: allSortedPosts },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { num } = Astro.params;
+const { posts } = Astro.props;
+const pageNumInt = parseInt(num ?? "1", 10);
+const paginatedPosts = getPageOfPosts(posts, pageNumInt);
+const paginationPros = getPagination(pageNumInt, posts.length);
+---
+
+<Layout title={`${Config.title} | ${Config.tagline}`} withHero>
+  <div class="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
+    <h2 class="text-center text-3xl md:text-4xl md:text-left font-extrabold">
+      Page {paginationPros.currentPage} of all posts
+    </h2>
+    <hr />
+    <div class="flex flex-col">
+      {paginatedPosts.map((post) => <PostPreview {...post} />)}
+    </div>
+    <Pagination {...paginationPros} />
+  </div>
+</Layout>

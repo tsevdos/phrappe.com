@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../../../layouts/Layout.astro";
+import PostPreview from "../../../../components/PostPreview.astro";
+import Pagination from "../../../../components/Pagination.astro";
+import {
+  getCategories,
+  getPagesArr,
+  getPagination,
+  getSortedCategoryPosts,
+  getPageOfPosts,
+} from "../../../../lib/helpers";
+import Config from "../../../../lib/config";
+
+export const getStaticPaths = (async () => {
+  const categories = await getCategories();
+  const categoryPages = await Promise.all(
+    categories.map(async (category) => {
+      const categoryPosts = await getCollection("posts", ({ data }) =>
+        data.categories.includes(category),
+      );
+
+      return {
+        category,
+        pagesArr: getPagesArr(categoryPosts.length),
+      };
+    }),
+  );
+
+  return categoryPages
+    .map((categoryPage) =>
+      categoryPage.pagesArr.map((pageNum) => ({
+        params: { category: categoryPage.category, pageNum },
+      })),
+    )
+    .flat();
+}) satisfies GetStaticPaths;
+
+const { category, pageNum } = Astro.params;
+const pageNumInt = parseInt(pageNum ?? "1", 10);
+const allCategoryPostsSorted = await getSortedCategoryPosts(category as string);
+const pagedCategoryPosts = getPageOfPosts(allCategoryPostsSorted, pageNumInt);
+const paginationPros = getPagination(pageNumInt, allCategoryPostsSorted.length);
+---
+
+<Layout title={`${category} - ${Config.title}`}>
+  <div class="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
+    <h2 class="text-center text-3xl md:text-4xl md:text-left font-extrabold">
+      Category: {category}
+    </h2>
+    <hr />
+    <div class="flex flex-col">
+      {pagedCategoryPosts.map((post) => <PostPreview {...post} />)}
+    </div>
+    <Pagination {...paginationPros} category={category} />
+  </div>
+</Layout>
