@@ -8,5 +8,5 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://phrappe.com",
   compressHTML: true,
-  integrations: [lottie(), tailwind(), mdx(), sitemap()]
+  integrations: [lottie(), tailwind(), mdx(), sitemap()],
 });

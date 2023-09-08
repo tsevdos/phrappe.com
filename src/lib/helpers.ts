@@ -1,4 +1,4 @@
-import { getCollection, CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { POSTS_PER_PAGE } from "./config";
 
 export type Post = CollectionEntry<"posts">;

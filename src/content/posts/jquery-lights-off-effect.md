@@ -18,9 +18,7 @@ I've been working on a "lights off" effect for videos the other day. Here's a [d
 ```js
 $(document).ready(function () {
   // Build the link
-  $(".lightsoff").append(
-    '<div class="lightsoffbtn"><a href="#">Lights Off</a></div>',
-  );
+  $(".lightsoff").append('<div class="lightsoffbtn"><a href="#">Lights Off</a></div>');
 
   // Prepare the overlay
   $("body").append(

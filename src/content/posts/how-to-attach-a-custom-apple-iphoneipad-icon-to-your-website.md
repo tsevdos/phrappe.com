@@ -30,8 +30,5 @@ Now if you don’t have access to the root directory of the site (no way!), or s
 The above code must be placed in the `head` section of our document and it **must** have a `link` relation (`rel`) with the value "**apple-touch-icon**", that’s the only two requirements. As you noticed we can name our PNG file as we want. Finally, yes we can use absolute paths as well, or even load our icon from other domains!
 
 ```html
-<link
-  rel="apple-touch-icon"
-  href="http://www.othersite.com/images/mycustomiphoneicon.png"
-/>
+<link rel="apple-touch-icon" href="http://www.othersite.com/images/mycustomiphoneicon.png" />
 ```

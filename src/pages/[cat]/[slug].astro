@@ -1,14 +1,14 @@
 ---
 import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
-import { getAllSortedPosts, getCategories, Post } from "../../lib/helpers";
+import { getAllSortedPosts, getCategories, type Post } from "../../lib/helpers";
 import Config from "../../lib/config";
 
 export const getStaticPaths = (async () => {
   const posts = await getAllSortedPosts();
   const categories = await getCategories();
 
-  return posts.map((post) => {
+  return posts.flatMap((post) => {
     return categories.map((cat) => ({
       params: { cat, slug: post.slug },
       props: { ...post },
