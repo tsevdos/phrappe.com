@@ -16,21 +16,40 @@ const { title, withHero } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Primary Meta Tag Generator -->
+    <title>{title}</title>
     <meta charset="UTF-8" />
+    <meta name="title" content={title} />
     <meta name="description" content={Config.tagline} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Config.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={Config.tagline} />
+    <meta property="og:image" content={`${Config.url}/og-image.svg`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Config.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={Config.tagline} />
+    <meta property="twitter:image" content={`${Config.url}/og-image.svg`} />
+
+    <!-- links -->
+    <link rel="icon" href={`${Config.url}/favicon.ico`} />
+    <link rel="sitemap" href={`${Config.url}/sitemap-index.xml`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${Config.url}/apple-touch-icon.png`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${Config.url}/favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${Config.url}/favicon-16x16.png`} />
     <link
       rel="alternate"
       type="application/rss+xml"
       title="phrappe.com » Feed"
-      href="https://www.phrappe.com/rss/feed.xml"
+      href={`${Config.url}/rss/feed.xml`}
     />
+
     <ViewTransitions />
   </head>
   <body>
