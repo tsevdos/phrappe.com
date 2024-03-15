@@ -3,51 +3,53 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Config from "../lib/config";
 
 type Props = {
   title: string;
+  description: string;
+  url: string;
   withHero?: boolean;
 };
 
-const { title, withHero } = Astro.props;
+const { title, description, url, withHero } = Astro.props;
+const { origin } = Astro.url;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Primary Meta Tag Generator -->
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta charset="UTF-8" />
     <meta name="title" content={title} />
-    <meta name="description" content={Config.tagline} />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Config.url} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={Config.tagline} />
-    <meta property="og:image" content={`${Config.url}/og-image.svg`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={`${origin}/og-image.svg`} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Config.url} />
     <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={Config.tagline} />
-    <meta property="twitter:image" content={`${Config.url}/og-image.svg`} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:image" content={`${origin}/og-image.svg`} />
 
     <!-- links -->
-    <link rel="icon" href={`${Config.url}/favicon.ico`} />
-    <link rel="sitemap" href={`${Config.url}/sitemap-index.xml`} />
-    <link rel="apple-touch-icon" sizes="180x180" href={`${Config.url}/apple-touch-icon.png`} />
-    <link rel="icon" type="image/png" sizes="32x32" href={`${Config.url}/favicon-32x32.png`} />
-    <link rel="icon" type="image/png" sizes="16x16" href={`${Config.url}/favicon-16x16.png`} />
+    <link rel="icon" href={`${origin}/favicon.ico`} />
+    <link rel="sitemap" href={`${origin}/sitemap-index.xml`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${origin}/apple-touch-icon.png`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${origin}/favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${origin}/favicon-16x16.png`} />
     <link
       rel="alternate"
       type="application/rss+xml"
       title="phrappe.com » Feed"
-      href={`${Config.url}/rss/feed.xml`}
+      href={`${origin}/rss/feed.xml`}
     />
 
     <ViewTransitions />

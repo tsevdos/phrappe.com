@@ -38,13 +38,18 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { category, pageNum } = Astro.params;
+const { href } = Astro.url;
 const pageNumInt = parseInt(pageNum ?? "1", 10);
 const allCategoryPostsSorted = await getSortedCategoryPosts(category as string);
 const pagedCategoryPosts = getPageOfPosts(allCategoryPostsSorted, pageNumInt);
 const paginationPros = getPagination(pageNumInt, allCategoryPostsSorted.length);
 ---
 
-<Layout title={`${category} - ${Config.title}`}>
+<Layout
+  title={`${category} - ${Config.title}`}
+  description={`${category} - ${Config.title}`}
+  url={href}
+>
   <div class="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
     <h2 class="text-center text-3xl md:text-4xl md:text-left font-extrabold">
       Category: {category}

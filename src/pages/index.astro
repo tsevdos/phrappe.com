@@ -5,13 +5,20 @@ import Pagination from "../components/Pagination.astro";
 import { getAllSortedPosts, getPageOfPosts, getPagination } from "../lib/helpers";
 import Config from "../lib/config";
 
+const { title, tagline } = Config;
 const pageNumber = 1;
+const { href } = Astro.url;
 const allPosts = await getAllSortedPosts();
 const indexPosts = getPageOfPosts(allPosts, pageNumber);
 const paginationPros = getPagination(pageNumber, allPosts.length);
 ---
 
-<Layout title={`${Config.title} | ${Config.tagline}`} withHero>
+<Layout
+  title={`${title} | ${tagline}`}
+  description={`John Tsevdos's personal blog | ${tagline}`}
+  url={href}
+  withHero
+>
   <div class="space-y-6 container mx-auto px-4 py-12 lg:px-8 lg:py-32 xl:max-w-7xl">
     <h2 class="text-center text-3xl md:text-4xl md:text-left font-extrabold">Latest Posts</h2>
     <hr />
