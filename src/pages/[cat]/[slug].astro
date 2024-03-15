@@ -22,11 +22,12 @@ const {
   data: { title, categories, date },
   render,
 } = Astro.props;
+const { href } = Astro.url;
 const { Content } = await render();
 const formattedDate = new Date(date).toLocaleDateString("en-GB");
 ---
 
-<Layout title={`${title} - ${Config.title}`}>
+<Layout title={`${title} - ${Config.title}`} description={`${title} - ${Config.title}`} url={href}>
   <div class="bg-white">
     <div class="space-y-16 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
       <div class="text-center prose prose-indigo prose-lg mx-auto">
