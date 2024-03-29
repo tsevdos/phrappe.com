@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "NODE_OPTIONS=--max_old_space_size=4096 npm run check && astro build",
-    "check": "tsc --noEmit && npm run lint && npm run prettier && NODE_OPTIONS=--max_old_space_size=4096 astro check",
+    "build": "npm run check && astro build",
+    "check": "npm run lint && npm run prettier && NODE_OPTIONS=--max_old_space_size=4096 astro check",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint --ext .ts,.tsx,.astro src",
@@ -14,7 +14,7 @@
     "prettier:fix": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.2.1",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
