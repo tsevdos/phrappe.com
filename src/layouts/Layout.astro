@@ -30,14 +30,20 @@ const { origin } = Astro.url;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
-    <meta property="og:image" content={`${origin}/og-image.svg`} />
+    <meta
+      property="og:image"
+      content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${encodeURIComponent(title)}&author=John+Tsevdos&websiteUrl=https%3A%2F%2Fphrappe.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F175707&theme=nightOwl`}
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={url} />
-    <meta property="twitter:image" content={`${origin}/og-image.svg`} />
+    <meta
+      property="twitter:image"
+      content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${title}&author=John+Tsevdos&websiteUrl=https%3A%2F%2Fphrappe.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F175707&theme=nightOwl`}
+    />
 
     <!-- links -->
     <link rel="icon" href={`${origin}/favicon.ico`} />
