@@ -42,7 +42,7 @@ const { origin } = Astro.url;
     <meta property="twitter:url" content={url} />
     <meta
       property="twitter:image"
-      content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${title}&author=John+Tsevdos&websiteUrl=https%3A%2F%2Fphrappe.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F175707&theme=nightOwl`}
+      content={`https://dynamic-og-image-generator.vercel.app/api/generate?title=${encodeURIComponent(title)}&author=John+Tsevdos&websiteUrl=https%3A%2F%2Fphrappe.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F175707&theme=nightOwl`}
     />
 
     <!-- links -->
