@@ -31,7 +31,7 @@ Do you have downloadable content in your website (like PDF files etc)? If yes th
 
 ```html
 <!-- will download as "issue28.pdf" -->
-<a href="/files/adlafjlxjewfasd89asd8f.pdf" download="issue28">Download Latest Issue</a>
+<a href="/files/temp-name.pdf" download="issue28">Download Latest Issue</a>
 ```
 
 ## autofocus attribute
