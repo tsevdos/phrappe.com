@@ -5,26 +5,12 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      },
-      // maxWidth: {
-      //   "8xl": "90rem",
-      //   "9xl": "105rem",
-      //   "10xl": "120rem",
-      // },
+      fontFamily: { sans: ["Inter", ...defaultTheme.fontFamily.sans] },
       typography: {
         DEFAULT: {
           css: {
-            a: {
-              textDecoration: "none",
-              "&:hover": {
-                opacity: ".75",
-              },
-            },
-            img: {
-              borderRadius: defaultTheme.borderRadius.lg,
-            },
+            a: { textDecoration: "none", "&:hover": { opacity: ".75" } },
+            img: { borderRadius: defaultTheme.borderRadius.lg },
           },
         },
       },
