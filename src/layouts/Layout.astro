@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
@@ -58,7 +58,7 @@ const { origin } = Astro.url;
       href={`${origin}/rss/feed.xml`}
     />
 
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <Header />
